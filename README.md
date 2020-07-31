@@ -3,10 +3,7 @@ TIG stack (telegraf, influxdb, grafana) on Raspberry Pi using docker
 
 **prerequisites**
 
-make sure docker runs on your Raspberry Pi
-
-(For a new raspberry Pi flash SD card and install hypriot on your raspberry pi first: `http://blog.hypriot.com/post/releasing-HypriotOS-1-8/`)
-
+make sure docker runs on your Raspberry Pi/RockPi4
 
 **installation**
 
