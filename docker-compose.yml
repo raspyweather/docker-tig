@@ -2,7 +2,7 @@ version: "3.2"
 
 services:
   influxdb:
-    image: influxdb
+    image: ghcr.io/terjesannum/influxdb-arm32:1.8.10-1
     container_name: influxdb
     volumes:
       - ./influxdb/data:/var/lib/influxdb
@@ -15,6 +15,13 @@ services:
     restart: always
     networks:
       - docker-tig
+    healthcheck:
+      test: "curl -f http://localhost:8086/ping"
+      start_period: 5m
+      interval: 30s
+      timeout: 20s
+      retries: 5
+
 
   telegraf:
     image: telegraf
